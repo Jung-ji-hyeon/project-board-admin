@@ -13,12 +13,14 @@ public record ArticleCommentResponse(
         String content,
         LocalDateTime createdAt
 ) {
+
     public static ArticleCommentResponse of(Long id, UserAccountDto userAccount, String content, LocalDateTime createdAt) {
         return new ArticleCommentResponse(id, userAccount, content, createdAt);
     }
 
     public static ArticleCommentResponse of(ArticleCommentDto dto) {
-        return new ArticleCommentResponse(dto.id(), dto.userAccount(), dto.content(), dto.createdAt());
+        return ArticleCommentResponse.of(dto.id(), dto.userAccount(), dto.content(), dto.createdAt());
     }
+
 }
 
