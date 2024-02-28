@@ -1,5 +1,6 @@
 package com.project.projectboardadmin.controller;
 
+import com.project.projectboardadmin.config.GlobalControllerConfig;
 import com.project.projectboardadmin.config.TestSecurityConfig;
 import com.project.projectboardadmin.dto.ArticleCommentDto;
 import com.project.projectboardadmin.dto.UserAccountDto;
@@ -24,7 +25,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @DisplayName("View 컨트롤러 - 댓글 관리")
-@Import(TestSecurityConfig.class)
+@Import({TestSecurityConfig.class, GlobalControllerConfig.class})
 @WebMvcTest(ArticleCommentManagementController.class)
 class ArticleCommentManagementControllerTest {
 
