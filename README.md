@@ -29,9 +29,6 @@ Spring Boot
 그 외
 
 * AdminLTE 3.2
-* webjars-locator-core
-* sockjs-client
-* stomp-websocket
 * Heroku
 
 ## 데모 페이지
